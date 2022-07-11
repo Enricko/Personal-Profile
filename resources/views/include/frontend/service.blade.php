@@ -20,7 +20,6 @@
                             </h3>
                         </a>
                         <p class="feature-text">{{ $row->description }}</p>
-                        {{-- <a href="about.html" class="btn btn-style btn-style-normal mt-4">More Info</a> --}}
                     </div>
                 </div>
             </div>
