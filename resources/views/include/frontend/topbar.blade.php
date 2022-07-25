@@ -21,16 +21,25 @@
                         <a class="nav-link" href="/#about">About Us</a>
                     </li>
                     <li class="nav-item">
+                        @if($service_4->count() >= 4)
+                        <a class="nav-link" href="/service">Services</a>
+                        @else
                         <a class="nav-link" href="/#service">Services</a>
+                        @endif
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/#blog">blog</a>
-                    </li>
-                    <li class="nav-item">
+                        @if($pengalaman_6->count() >= 6)
+                        <a class="nav-link" href="/pengalaman">Experience</a>
+                        @else
                         <a class="nav-link" href="/#pengalaman">Experience</a>
+                        @endif
                     </li>
                     <li class="nav-item">
+                        @if($port->count() >= 6)
+                        <a class="nav-link" href="/portfolio">Portfolio</a>
+                        @else
                         <a class="nav-link" href="/#portfolio">Portfolio</a>
+                        @endif
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/#contact">Contact Us</a>

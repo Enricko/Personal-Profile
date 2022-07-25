@@ -10,7 +10,7 @@ class Service extends Model
 {
     use HasFactory;
     public function allData(){
-        return DB::table('service')->get();
+        return DB::table('service')->orderByDesc('id')->get();
     }
     public function data_4(){
         return DB::table('service')->limit('4')->get();

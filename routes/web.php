@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,6 +22,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('',[App\Http\Controllers\Frontend::class,'index']);
 Route::get('/cv',[App\Http\Controllers\Frontend::class,'cv']);
 // === FRONTEND ===
+
+// === ALL DATA ===
+Route::get('/portfolio',[App\Http\Controllers\Frontend::class,'all_port']);
+Route::get('/pengalaman',[App\Http\Controllers\Frontend::class,'all_pengalaman']);
+Route::get('/service',[App\Http\Controllers\Frontend::class,'all_service']);
+// === ALL DATA ===
 
 // === ADMIN ===
 Route::get('/admin',[App\Http\Controllers\Admin::class,'index']);

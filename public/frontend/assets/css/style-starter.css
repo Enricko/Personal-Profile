@@ -17632,6 +17632,70 @@ button.owl-next {
 }
 
 
+/* All Portfolio */
+
+.w3l-features_port {
+    background: url(../images/back1.jpg) no-repeat center fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.w3l-features_port::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(0 0 0 / 38%);
+    z-index: -1;
+}
+
+.col-md-4.col-sec {
+    padding: 0 5px;
+}
+
+.w3l-features_port p.text-para {
+    color: #eee;
+}
+
+.w3l-features_port .grids-1 {
+    margin-top: 0px;
+    padding: 40px 30px;
+}
+
+.w3l-features_port .feature-grid-left {
+    align-self: center;
+}
+
+.w3l-features_port .box-wrap {
+    padding: 35px 18px;
+    text-align: center;
+    background-color: var(--bg-color);
+    border-radius: 8px;
+}
+
+.w3l-features_port .box-wrap img {
+    border-radius: 50%;
+}
+
+.w3l-features_port .box-wrap h4 a {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 600;
+    margin-top: 12px;
+    display: block;
+    color: var(--heading-color);
+}
+
+.w3l-features_port .box-wrap h4 a:hover {
+    color: var(--primary-color);
+}
+
+
 /* //services section */
 
 

@@ -10,7 +10,7 @@ class Pengalaman extends Model
 {
     use HasFactory;
     public function allData(){
-        return DB::table('pengalaman')->get();
+        return DB::table('pengalaman')->orderByDesc('id')->get();
     }
     public function data_6(){
         return DB::table('pengalaman')->limit('6')->get();

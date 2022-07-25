@@ -34,11 +34,39 @@
                             <td>{{ $row->nama }}</td>
                             <td>{{ $row->email }}</td>
                             <td>0{{ $row->phone }}</td>
-                            <td>{{ $row->message }}.</td>
+                            <td style="width:300px;">
+                                @if(strlen($row->message) >= 100)
+                                    {{ wordwrap(substr($row->message,0,100),33,"\n") }}
+                                    <a href="#popup{{ $row->id }}">Read More...</a>
+                                @else
+                                    {{ $row->message }}
+                                @endif
+                            </td>
                             <td>
                                 <a class="btn btn-danger" href="/admin/contact/delete/{{ $row->id }}" onclick="return confirm('Apakah anda yakin?')">Delete</a>
                             </td>
                         <tr>
+                            <div id="popup{{ $row->id }}" class="overlay">
+                                <div class="popup scroll-port" style="margin-top:100px;">
+                                    <div class="info">
+                                        <h6 class="info-title-port">Name  </h6>
+                                        <h6 class="info-subtitle-port">{{ ucfirst($row->nama) }}</h6>
+                                    </div>
+                                    <div class="info">
+                                        <h6 class="info-title-port">Email  </h6>
+                                        <h6 class="info-subtitle-port">{{ $row->email }} </h6>
+                                    </div>
+                                    <div class="info">
+                                        <h6 class="info-title-port" >Phone  </h6>
+                                        <h6 class="info-subtitle-port">{{ $row->phone }} </h6>
+                                    </div>
+                                    <div class="text-center mt-3">
+                                        <h3>MESSAGE:</h3>
+                                        <p class="mt-4 mb-4">{{ $row->message }}</p>
+                                    </div>
+                                    <a class="close" href="#">&times;</a>
+                                </div>
+                            </div>
                         @endforeach
                     </tbody>
                 </table>

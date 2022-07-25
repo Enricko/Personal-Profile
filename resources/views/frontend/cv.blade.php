@@ -89,6 +89,10 @@
                         @endif
                     </div>
                 @endforeach
+                <h5 class="title-style">Avaliable Service</h5>
+                @foreach($service as $row)
+                <p class="mt-1" style="font-weight:700;">{{ $row->title }}</p>
+                @endforeach
                 @foreach($program as $row)
                 <p class="mt-1" style="font-weight:700;">Operating System</p>
                 <p>{{ $row->operating_system }}</p>

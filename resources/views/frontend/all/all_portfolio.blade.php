@@ -1,4 +1,7 @@
-<section class="w3l-features">
+@extends('include.frontend.app_front')
+@section('title','all_port')
+@section('content')
+<section class="w3l-features_port" style="margin-top:90px;">
     <div class="container py-lg-5 py-4">
         <div class="style-title text-center position-relative mb-5">
             <h1 class="title-style">Portfolio
@@ -42,10 +45,14 @@
             </div>
             @endforeach
         </div>
-        @if($port->count() >= 6)
-        <div class="d-flex justify-content-center mt-3 text-center mb-3">
-            <a href="/portfolio" class="btn btn-info" style="border-radius:25px;height:40px;width:200px;">View All Portfolio</a>
+        <style>
+            img,svg{
+                width:20px;
+            }
+        </style>
+        <div class="d-flex justify-content-center">
+            {{ $port->render() }}
         </div>
-        @endif
     </div>
-</section>
+</section> 
+@endsection

@@ -11,7 +11,7 @@ class Portfolio extends Model
     use HasFactory;
 
     public function allData(){
-        return DB::table('portfolio')->get();
+        return DB::table('portfolio')->orderByDesc('id')->get();
     }
     public function getData($id){
         return DB::table('portfolio')->where('id',$id)->first();
